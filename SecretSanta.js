@@ -33,12 +33,8 @@ SecretSanta.prototype.add = function (name) {
 };
 
 SecretSanta.prototype.generate = function () {
-  console.log("Im called");
-
   var pairings = Object.create(null);
   var candidatePairings = Object.create(null);
-
-  console.log(pairings, candidatePairings);
 
   this.names.forEach(function (name) {
     if (Object.prototype.hasOwnProperty.call(this.enforced, name)) {
@@ -105,8 +101,6 @@ SecretSanta.prototype.generate = function () {
 
     pairings[name] = pairing;
   }
-
-  console.log(pairings);
 
   // Email the correct people
 
